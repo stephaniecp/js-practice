@@ -1,0 +1,2 @@
+Tables from SSA used for this project: https://www.ssa.gov/oact/STATS/table4c6.html 
+Custom CSV file source: https://docs.google.com/spreadsheets/d/1ItvIzVi6qFgWigp_z7xf1xMBwCTumouA6aaz1NKfMQ0/edit#gid=0 
