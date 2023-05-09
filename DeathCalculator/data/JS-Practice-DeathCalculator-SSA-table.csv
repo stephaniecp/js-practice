@@ -1,5 +1,4 @@
-"Exact
-age",(Male) Death probability,(Male) Number of lives,(Male) Life expectancy,(Female) Death probability,(Female) Number of lives,(Female) Life expectancy
+exactAge,male_deathProbability,male_numberOfLives,male_lifeExpectancy,female_deathProbability,female_numberOfLives,female_lifeExpectancy
 0,0.005837,"100,000",74.12,0.004907,"100,000",79.78
 1,0.00041,"99,416",73.55,0.000316,"99,509",79.17
 2,0.000254,"99,376",72.58,0.000196,"99,478",78.19
