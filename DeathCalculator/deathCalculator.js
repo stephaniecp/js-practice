@@ -10,7 +10,7 @@ if (userIsAdude.toUpperCase() === 'Y') {
     userIsAdude = false;
     console.log('Hello, dudette!');
 } else {
-    console.log("I'm sorry, I didn't understand your response.");
+    throw new error ("I'm sorry, I didn't understand your response. The program will now exit.");
 }
 console.log("I see the answer to user is a dude: " + userIsAdude + ".");
 
