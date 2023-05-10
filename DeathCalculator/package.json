@@ -1,0 +1,14 @@
+{
+  "name": "deathcalculator",
+  "version": "1.0.0",
+  "description": "Tables from SSA used for this project: https://www.ssa.gov/oact/STATS/table4c6.html  Custom CSV file source: https://docs.google.com/spreadsheets/d/1ItvIzVi6qFgWigp_z7xf1xMBwCTumouA6aaz1NKfMQ0/edit#gid=0",
+  "main": "deathCalculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  }
+}
