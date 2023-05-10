@@ -40,24 +40,12 @@ let age = Math.round(userAgeInYears);
 // Print the user's age
 console.log('Your age is ' + age + ' years.');
 
-
-
-
-
 const sqlite3 = require('sqlite3').verbose();
 
 // Open a database connection
 let db = new sqlite3.Database('DeathCalculator/data/deathData.db'); // 5/9/23 Corrected - Path was wrong and leading to SQLite error 14 (SQLITE_CANTOPEN)
 
-
-
-
-
-// Look for more examples of this + option with AWAIT + look up the two SQLite errors (14/SQLITE_CANTOPEN)
-
 // Run a query
-
-
 async function executeQuery() {
     try {
       // Run a query
