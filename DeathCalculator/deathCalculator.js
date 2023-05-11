@@ -46,13 +46,12 @@ const sqlite3 = require('sqlite3').verbose();
 let db = new sqlite3.Database('DeathCalculator/data/deathData.db'); // 5/9/23 Corrected - Path was wrong and leading to SQLite error 14 (SQLITE_CANTOPEN)
 
 // Run a query
-async function executeQuery() {
+export async function executeQuery() {
     try {
       // Run a query
       const genderColumn = userIsAdude ? 'male_lifeExpectancy' : 'female_lifeExpectancy';
       const sql = `SELECT ${genderColumn} FROM deathChart WHERE exactAge = ${age}`;
       console.log(sql);
-  
       const rows = await new Promise((resolve, reject) => {
         db.all(sql, [], (err, rows) => {
           if (err) {
@@ -71,10 +70,10 @@ async function executeQuery() {
 }
   
 // Call the function within an async context
-async function run() {
+export async function run() {
 await executeQuery();
 }
-  
+
 run(); // Start the execution
 
 db.close();

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Death Calculator</title>
+  <script src="deathCalculator.js"></script>
+</head>
+<body>
+  <h1>Interactive Death Calculator</h1>
+  
+  <p>Question 1: What is your year of birth (YYYY)?</p>
+  <input type="text" id="birthYearInput">
+
+  <p>Question 1: What is your month of birth (MM)?</p>
+  <input type="text" id="birthMonthInput">
+
+  <p>Question 1: What is your day of birth (DD)?</p>
+  <input type="text" id="birthDayInput">
+
+  <p>Question 2: Are you a dude? (Y/N)</p>
+  <input type="text" id="genderInput">
+
+  <button onclick="executeQuery()">Calculate Age Of Death</button>
+
+  <script src="deathCalculator.js"></script>
+
+<script>
+    function executeQuery() {
+      // Retrieve user input
+      var birthYear = document.getElementById("birthYearInput").value;
+      var birthMonth = document.getElementById("birthMonthInput").value;
+      var birthDay = document.getElementById("birthDayInput").value;
+      var gender = document.getElementById("genderInput").value.toUpperCase();
+
+      // Calculate the birth date
+      var birthDate = new Date(birthYear, birthMonth, birthDay);
+
+      // Call the executeQuery function from deathCalculator.js
+      executeQuery(birthDate, gender);
+    }
+  </script>
+   
+</body>
+</html>
