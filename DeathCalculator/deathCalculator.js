@@ -14,11 +14,20 @@ if (userIsAdude.toUpperCase() === 'Y') {
 }
 console.log("I see the answer to user is a dude: " + userIsAdude + ".");
 
-let userBirthYear = prompt.question('What is your year of birth (YYYY)? ');
-let userBirthMonth = prompt.question('What is your month of birth (MM)? ');
-let userBirthDay = prompt.question('What is your day of birth (DD)? ');
-console.log('Your DOB (YYYY/MM/DD) is: ' + userBirthYear + ` ` + userBirthMonth + ` ` + userBirthDay);
-let userBirthDate = new Date(userBirthYear, userBirthMonth, userBirthDay);
+// // Old funtion variables
+// let userBirthYear = prompt.question('What is your year of birth (YYYY)? ');
+// let userBirthMonth = prompt.question('What is your month of birth (MM)? ');
+// let userBirthDay = prompt.question('What is your day of birth (DD)? ');
+// console.log('Your DOB (YYYY/MM/DD) is: ' + userBirthYear + ` ` + userBirthMonth + ` ` + userBirthDay);
+// let userBirthDate = new Date(userBirthYear, userBirthMonth, userBirthDay);
+
+// Retrieve user input
+let birthYear = document.getElementById("birthYearInput").value;
+let birthMonth = document.getElementById("birthMonthInput").value;
+let birthDay = document.getElementById("birthDayInput").value;
+let isAdudeYorN = document.getElementById("genderInput").value.toUpperCase();
+console.log('Your DOB (YYYY/MM/DD) is: ' + birthYear + ` ` + birthMonth + ` ` + birthDay + ` and answer to are you a dude is: ` + isAdudeYorN);
+let userBirthDate = new Date(birthYear, birthMonth, birthDay);
 
 let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth();
@@ -68,6 +77,30 @@ export async function executeQuery() {
       console.error(err.message);
     }
 }
+
+// //Old function, before changing variable to take text field content
+// export async function executeQuery() {
+//     try {
+//       // Run a query
+//       const genderColumn = userIsAdude ? 'male_lifeExpectancy' : 'female_lifeExpectancy';
+//       const sql = `SELECT ${genderColumn} FROM deathChart WHERE exactAge = ${age}`;
+//       console.log(sql);
+//       const rows = await new Promise((resolve, reject) => {
+//         db.all(sql, [], (err, rows) => {
+//           if (err) {
+//             reject(err);
+//           } else {
+//             resolve(rows);
+//           }
+//         });
+//       });
+  
+//       // Process the query results
+//       rows.forEach(row => console.log(row));
+//     } catch (err) {
+//       console.error(err.message);
+//     }
+// }
   
 // Call the function within an async context
 export async function run() {
