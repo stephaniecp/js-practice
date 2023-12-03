@@ -14,34 +14,37 @@
 
 function maxProfitDays(stockPrices) {
 
-    //Consider each day as a sell day and compute the buy day that would have yielded the highest return. Compare all results.
-
-    profitPossibilities = stockPrices.map((sellPrice, sellIndex) => {
-        let maxProfit = 0;
-        let maxProfitBuyIndex = -1;
-        for (let i = 0; i < sellIndex; i++) {
-            buyPrice = stockPrices[i];
-            possibleProfit = sellPrice - buyPrice;
-            if (possibleProfit > maxProfit) {
-                maxProfit = possibleProfit;
-                maxProfitBuyIndex = i;
+    //Consider each day as a sell day and find the previous buy day that would have yielded the highest return. Compare all results.
+    profitPossibilities = stockPrices.map((sellPrice, sellDayIndex) => {
+        let maxProfitDollars = -9999; //Just a starting value that indicates a real value hasn't been set
+        let maxProfitBuyDayIndex = -1; //Just a starting value that indicates a real value hasn't been set
+        
+        for (let i = 0; i < sellDayIndex; i++) { //Let's consider each of the preceding days as the lowest buy price
+            buyPrice = stockPrices[i]; //Get the buyPrice for day i
+            possibleProfitDollars = sellPrice - buyPrice; //Calculate the possible profit if we had purchased on day i
+            if (possibleProfitDollars > maxProfitDollars) { //Is the profit greater than the previously calculated max profit?
+                //If the profit for this day is better, record it
+                maxProfitDollars = possibleProfitDollars;
+                maxProfitBuyDayIndex = i;
             }
         }
-        return {
-            sellIndex: sellIndex,
-            buyIndex: maxProfitBuyIndex,
-            profit: maxProfit
+
+        return { //Create an object that returns the data we need to know about this 
+            sellDayIndex: sellDayIndex,
+            buyDayIndex: maxProfitBuyDayIndex,
+            profit: maxProfitDollars
         }
     })
 
     console.log(profitPossibilities)
 
+    //Now that we have all of the best buy days for each sell days, lets find the data produces the most profit
     maxProfitValues = profitPossibilities.reduce((prevValue, sellDayProfitData) => {
-        if (prevValue === null) return sellDayProfitData
-        return (prevValue.profit > sellDayProfitData.profit) ? prevValue : sellDayProfitData
+        if (prevValue === null) return sellDayProfitData //prevValue will be null on the first call
+        return (prevValue.profit > sellDayProfitData.profit) ? prevValue : sellDayProfitData //Always return the data object with the most profit
     })
 
-    return [maxProfitValues.buyIndex, maxProfitValues.sellIndex]
+    return [maxProfitValues.buyDayIndex, maxProfitValues.sellDayIndex]
 }
 
 // // Leave this so we can test your code:
@@ -54,3 +57,4 @@ function callMaxProfitDays(valueArray) {
 }
 
 callMaxProfitDays([17, 11, 60, 25, 150, 75, 31, 120])
+callMaxProfitDays([10, 10, 10, 10, 10, 10, 9, 10])
