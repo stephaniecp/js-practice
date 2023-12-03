@@ -13,17 +13,29 @@
 
 
 function statsFinder(numbersArray) {
-
+    //start with computing the average. Using array.reduce is very compact way to run over each of the array entries and create a sum
     average = numbersArray.reduce((sum, current) => sum + current) / numbersArray.length
 
+    //This approach is too brilliantly elegant, but requires some explanation:
+    //See these concepts:
+    // - array.sort - quick way to use an arrow function to sort a list
+    // - array.filter - quick way to find elements in an array matching some condition
+    // - array.pop - removes the last element of an array
+    // Basically it sorts the array to have more frequent elements at the end of the list and then pulls the last item off the list 
+    mode = numbersArray.sort((a,b) => numbersArray.filter(v => v===a).length - numbersArray.filter(v => v===b).length).pop();
 
-    return [average]
+    return [average, mode];
 }
 
+function callStatsFinder(numbersArray) {
+    console.log(`>> input: ${numbersArray}`);
+    let result = statsFinder(numbersArray);
+    console.log(`<< result: ${result}`);
+}
 
-console.log(statsFinder([10, 10, 20, 40]))
-
-//   console.log(statsFinder([500, 400, 400, 375, 300, 350, 325, 300]))
+callStatsFinder([10, 10, 20, 40]);
+callStatsFinder([10, 20, 20, 40]);
+callStatsFinder([500, 400, 400, 375, 300, 350, 325, 300]);
   
 
 //   // Leave this so we can test your code:
