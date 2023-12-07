@@ -192,3 +192,8 @@ For example, changeOptions(5, [1, 2, 5, 10, 100]) should return 4. This is be
 *  1 + 2 + 2
 *  5
 You can assume inputMoney is positive and you can assume coins has at least one value.
+
+# Running instructions
+1. Open terminal, navigate to: ...js-practice/Codecademy/codeChallenges
+2. node statsFinder.js
+3. Back up to parent with cd ../
