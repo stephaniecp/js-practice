@@ -1,4 +1,4 @@
-/** 
+ /** 
 ## 03 - Prime Number Finder 
 
 Create a primeFinder() function that takes in a number, n, and returns all the prime numbers from 1 to n (inclusive). As a reminder, a prime number is a number that is only divisible by 1 and itself.
