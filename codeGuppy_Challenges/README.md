@@ -3,11 +3,11 @@
 * ~~Coding challenge #1: Print numbers from 1 to 10~~
 * ~~Coding challenge #2: Print the odd numbers less than 100~~
 * ~~Coding challenge #3: Print the multiplication table with 7~~
-* ~~Coding challenge #4: Print all the multiplication tables with numbers from 1 to 10~~
-* Coding challenge #5: Calculate the sum of numbers from 1 to 10
-* Coding challenge #6: Calculate 10!
-* Coding challenge #7: Calculate the sum of odd numbers greater than 10 and less than 30
-* Coding challenge #8: Create a function that will convert from Celsius to Fahrenheit
+* ~~Coding challenge #4: Print all the multiplication tables with numbers from 1 to 10
+* ~~Coding challenge #5: Calculate the sum of numbers from 1 to 10
+* ~~Coding challenge #6: Calculate 10!
+* ~~Coding challenge #7: Calculate the sum of odd numbers greater than 10 and less than 30
+* ~~Coding challenge #8: Create a function that will convert from Celsius to Fahrenheit
 * Coding challenge #9: Create a function that will convert from Fahrenheit to Celsius
 * Coding challenge #10: Calculate the sum of numbers in an array of numbers
 * Coding challenge #11: Calculate the average of the numbers in an array of numbers
