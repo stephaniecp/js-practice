@@ -14,3 +14,6 @@ function sumNumbers11to29() { // Declared function to calculate and print the su
 }
 
 sumNumbers11to29();
+
+
+//JG - nice

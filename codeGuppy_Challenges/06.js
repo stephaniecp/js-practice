@@ -16,3 +16,6 @@ function calculate10() {
 }
 
 calculate10();
+
+
+//JG - good and simple

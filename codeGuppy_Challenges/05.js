@@ -8,3 +8,5 @@ function sumOfNumbers1to10(){
 }
 
 sumOfNumbers1to10(); // Returns 55
+
+//JG - good and simple

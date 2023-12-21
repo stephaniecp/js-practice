@@ -12,3 +12,8 @@ function sumOfNumbersWithinMyArray(myArray){
 let myArray = [2, 3, -1, 5, 7, 9, 10, 15, 95]; 
 let sum = sumOfNumbersWithinMyArray(myArray);
 console.log("Sum value is: " + sum);
+
+//JG - your approach looks good, there are other ways to work with arrays that can be more concise, but yours is good and easy to read.
+//This is a way that you might see examples of:
+console.log("Using array.reduce:");
+console.log(myArray.reduce((prevSum, currentElement) => prevSum + currentElement));

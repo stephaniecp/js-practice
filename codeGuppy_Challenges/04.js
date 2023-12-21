@@ -20,3 +20,15 @@ function printTableOfNumbersBetween1And10(){
 }
 
 printTableOfNumbersBetween1And10();
+
+
+//JG - Your solution was fine, but just using a direct nest loop makes it a little denser in this case
+//That said, whenever you feel like another function makes something simpler to understand, do it!
+function JG_printTableOfNumbersBetween1And10(){
+    for(var i = 1; i <= 10; i++) {// Outer loop: iterates from 1 to 10
+        for(var j = 1; j <= 10; j++) { // Inner loop iterates from 1 to 10, representing the multiplicands (value taht i takes in the context of multiplication) for the given number n.
+            console.log(`${i} * ${j} = ${i * j}`); // Print the current multiplication row
+        }
+        console.log(""); // Prints an empty line to separate tables visually
+    }    
+}

@@ -30,3 +30,5 @@ function celsiusToFahrenheit4(n){
 }
 console.log("Option 4 returns: " + celsiusToFahrenheit4(21)); // Returns  69.8F
 
+
+//JG - nice, good to try different styles for different situations
