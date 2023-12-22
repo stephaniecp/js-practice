@@ -8,10 +8,10 @@
 * ~~Coding challenge #6: Calculate 10!
 * ~~Coding challenge #7: Calculate the sum of odd numbers greater than 10 and less than 30
 * ~~Coding challenge #8: Create a function that will convert from Celsius to Fahrenheit
-* Coding challenge #9: Create a function that will convert from Fahrenheit to Celsius
-* Coding challenge #10: Calculate the sum of numbers in an array of numbers
-* Coding challenge #11: Calculate the average of the numbers in an array of numbers
-* Coding challenge #12: Create a function that receives an array of numbers and returns an array containing only the positive numbers (multiple solutions)
+*  ~~Coding challenge #9: Create a function that will convert from Fahrenheit to Celsius
+*  ~~Coding challenge #10: Calculate the sum of numbers in an array of numbers
+* ~~Coding challenge #11: Calculate the average of the numbers in an array of numbers
+* ~~Coding challenge #12: Create a function that receives an array of numbers and returns an array containing only the positive numbers (multiple solutions)
 * Coding challenge #13: Find the maximum number in an array of numbers
 * Coding challenge #14: Print the first 10 Fibonacci numbers without recursion
 * Coding challenge #15: Create a function that will find the nth Fibonacci number using recursion
